@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &642464333805408609
+--- !u!1 &6895653008899513860
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 642464333805408611}
-  - component: {fileID: 642464333805408608}
-  - component: {fileID: -8414282707463172775}
+  - component: {fileID: 6895653008899513862}
+  - component: {fileID: 6895653008899513861}
+  - component: {fileID: 6656967300864361020}
+  - component: {fileID: 5167025544982781701}
+  - component: {fileID: 2346358771581607974}
   m_Layer: 0
   m_Name: Knife
   m_TagString: Untagged
@@ -18,28 +20,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &642464333805408611
+--- !u!4 &6895653008899513862
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642464333805408609}
+  m_GameObject: {fileID: 6895653008899513860}
   m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.633, y: -0.217, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
---- !u!212 &642464333805408608
+--- !u!212 &6895653008899513861
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642464333805408609}
+  m_GameObject: {fileID: 6895653008899513860}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -85,16 +87,77 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-8414282707463172775
+--- !u!114 &6656967300864361020
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642464333805408609}
+  m_GameObject: {fileID: 6895653008899513860}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a2449827047a0947bf8f9565f8e3e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: 10751e99e90817245ac32588f10c6d32, type: 2}
   destroyAfterSeconds: 3
+--- !u!60 &5167025544982781701
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895653008899513860}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.71875, y: 0.75}
+    newSize: {x: 0.71875, y: 0.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.3240309, y: -0.1517524}
+      - {x: -0.2743031, y: -0.21979956}
+      - {x: -0.37045646, y: -0.31959322}
+      - {x: -0.30589524, y: -0.38645104}
+      - {x: -0.20596305, y: -0.29289612}
+      - {x: -0.10627012, y: -0.35837793}
+      - {x: -0.05379158, y: -0.2887841}
+      - {x: -0.115598746, y: -0.22855118}
+      - {x: 0.35106403, y: 0.248113}
+      - {x: 0.36768594, y: 0.3777703}
+      - {x: 0.29218906, y: 0.37101963}
+      - {x: -0.20167972, y: -0.13197292}
+      - {x: -0.20722038, y: -0.1375134}
+      - {x: -0.2873461, y: -0.07091808}
+--- !u!50 &2346358771581607974
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895653008899513860}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
